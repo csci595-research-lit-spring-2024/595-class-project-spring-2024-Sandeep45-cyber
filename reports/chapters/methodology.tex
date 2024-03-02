@@ -3,7 +3,19 @@
 \chapter{Methodology}
 \label{ch:method} % Label for method chapter
 
+\section{Algorithm Description}
+\subsection{CatBoost}
+CatBoost is a supervised machine learning method that is used by the Train Using AutoML tool and uses decision trees for classification and regression. As its name suggests, CatBoost has two main features, it works with categorical data (the Cat) and it uses gradient boosting (the Boost). Gradient boosting is a process in which many decision trees are constructed iteratively. Each subsequent tree improves the result of the previous tree, leading to better results. CatBoost improves on the original gradient boost method for a faster implementation.
 
+\subsection{XGBoost}
+\href{https://xgboost.ai/}{XGBoost}, which stands for Extreme Gradient Boosting, is a scalable, distributed \href{https://en.wikipedia.org/wiki/Gradient_boosting}{gradient-boosted} decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification, and ranking problems. It’s vital to an understanding of XGBoost to first grasp the machine learning concepts and algorithms that XGBoost builds upon: supervised machine learning, decision trees, ensemble learning, and \href{https://developer.nvidia.com/blog/gradient-boosting-decision-trees-xgboost-cuda/}{gradient boosting}.
+
+\subsection{Logistic Regression}
+Logistic Regression is a statistical technique used primarily for binary classification tasks, although it can be extended to multi-class problems. It models the relationship between one or more independent variables and a categorical dependent variable by estimating probabilities using the logistic function.
+
+\subsection{Random Forest Classifier}
+Random Forest is an ensemble learning algorithm used for classification and regression tasks. It constructs a multitude of decision trees during training, each trained on a random subset of the data and using a random subset of features at each split. The final prediction is determined by aggregating the predictions of all the individual trees, providing robustness against overfitting and often achieving high accuracy.
+ 
 
 \section{Data Collection}
 The dataset for the credit card fraud detection system is taken from an online source Kaggle. It contains details of transactions made by the credit card by the card holders that happened in 2 days. The data set consists of 31 columns which contain the results of the transformation by PCA as numerical data input. Namely V1, V2, V3….V28 are the primary components identified by PCA. Only 2 columns which are ‘Time’ and ‘Amount’ have not undergone PCA transformation. The ‘Time’ column contains the seconds passed between each transaction and the dataset’s initial transaction. The column name ‘Amount’ contains the transaction amount which may be utilized for cost-sensitive learning based on examples. The ‘Class’ column is the answer variable and has the response as 1 in the event of fraud and 0 if no fraud is identified. It is advisable to use the Area Under the Precision-Recall Curve (AUPRC) to measure the accuracy for class imbalance ratio whereas for imbalance class, accuracy by confusion matrix is meaningless.
@@ -11,6 +23,17 @@ The dataset for the credit card fraud detection system is taken from an online s
 \section{Data Processing}
 While processing the data set, the raw, unstructured data set is transformed into a clear, understandable form. Data preprocessing is the process of changing the data into relevant and appropriate forms before sending the data for training and testing. In this way, if the raw data contains any outliers, noise, missing values or any irrelevant information, it can be removed before passing the data as input for the model which is the final data set. There are several categories into which data preparation techniques are divided. Detecting outliers and addressing missing numbers are the two primary tasks of this phase. Various cleaning procedures are done in order to clean the data set by addressing problems which include noisy data, missing values, finding and removing outliers, and solving the differences. If users believe that the data is polluted, they are less inclined to trust data mining results. Values for a characteristic that differs from other data by more than two standard deviations might be classified as outliers. There are various ways to deal with outliers but in this research paper, the Z-score normalization method is used to detect and remove any outliers present in the dataset.
 
+
+\section{Plot of the Dataset}
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{figures/plot.png}
+    \caption{Figure of the Data}
+    \label{fig:Plot of the Data}
+\end{figure}
+\
 
 
 \begin{table}[ht!]
