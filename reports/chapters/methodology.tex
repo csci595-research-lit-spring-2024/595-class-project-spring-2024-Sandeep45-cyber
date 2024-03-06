@@ -15,7 +15,7 @@ Logistic Regression is a statistical technique used primarily for binary classif
 
 \subsection{Random Forest Classifier}
 Random Forest is an ensemble learning algorithm used for classification and regression tasks. It constructs a multitude of decision trees during training, each trained on a random subset of the data and using a random subset of features at each split. The final prediction is determined by aggregating the predictions of all the individual trees, providing robustness against overfitting and often achieving high accuracy.
- 
+.
 
 \section{Data Collection}
 The dataset for the credit card fraud detection system is taken from an online source Kaggle. It contains details of transactions made by the credit card by the card holders that happened in 2 days. The data set consists of 31 columns which contain the results of the transformation by PCA as numerical data input. Namely V1, V2, V3….V28 are the primary components identified by PCA. Only 2 columns which are ‘Time’ and ‘Amount’ have not undergone PCA transformation. The ‘Time’ column contains the seconds passed between each transaction and the dataset’s initial transaction. The column name ‘Amount’ contains the transaction amount which may be utilized for cost-sensitive learning based on examples. The ‘Class’ column is the answer variable and has the response as 1 in the event of fraud and 0 if no fraud is identified. It is advisable to use the Area Under the Precision-Recall Curve (AUPRC) to measure the accuracy for class imbalance ratio whereas for imbalance class, accuracy by confusion matrix is meaningless.
@@ -23,19 +23,23 @@ The dataset for the credit card fraud detection system is taken from an online s
 \section{Data Processing}
 While processing the data set, the raw, unstructured data set is transformed into a clear, understandable form. Data preprocessing is the process of changing the data into relevant and appropriate forms before sending the data for training and testing. In this way, if the raw data contains any outliers, noise, missing values or any irrelevant information, it can be removed before passing the data as input for the model which is the final data set. There are several categories into which data preparation techniques are divided. Detecting outliers and addressing missing numbers are the two primary tasks of this phase. Various cleaning procedures are done in order to clean the data set by addressing problems which include noisy data, missing values, finding and removing outliers, and solving the differences. If users believe that the data is polluted, they are less inclined to trust data mining results. Values for a characteristic that differs from other data by more than two standard deviations might be classified as outliers. There are various ways to deal with outliers but in this research paper, the Z-score normalization method is used to detect and remove any outliers present in the dataset.
 
+\section{Implementation}
+\subsection{Logistic Regression}
+ We Implement binary classification using Python's scikit-learn library. First, we split the dataset into training and testing sets. The training set is used to train the model, while the testing set is kept aside for evaluation. After training, the model predicts the labels for the test set. We then evaluate the model's performance using metrics like accuracy and F1 score, which consider the correctness of predictions. The confusion matrix provides a visual representation of the model's performance, helping us understand how well it's classifying instances. By analyzing these metrics and the confusion matrix, we gain insights into the model's effectiveness in correctly classifying instances into their respective classes
+
 
 \section{Plot of the Dataset}
 
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.3]{figures/plot.png}
+    \includegraphics[scale=0.3]{figures/BasicPlot.png}
     \caption{Figure of the Data}
     \label{fig:Plot of the Data}
 \end{figure}
 \
 
-
+\section{Table of the Dataset]}
 \begin{table}[ht!]
     \centering
     \caption{Undergraduate report template structure}
