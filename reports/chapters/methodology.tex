@@ -3,19 +3,30 @@
 \chapter{Methodology}
 \label{ch:method} % Label for method chapter
 
-\section{Algorithm Description}
-\subsection{CatBoost}
-CatBoost is a supervised machine learning method that is used by the Train Using AutoML tool and uses decision trees for classification and regression. As its name suggests, CatBoost has two main features, it works with categorical data (the Cat) and it uses gradient boosting (the Boost). Gradient boosting is a process in which many decision trees are constructed iteratively. Each subsequent tree improves the result of the previous tree, leading to better results. CatBoost improves on the original gradient boost method for a faster implementation.
+\section{Importing the necessary libraries}
 
-\subsection{XGBoost}
-\href{https://xgboost.ai/}{XGBoost}, which stands for Extreme Gradient Boosting, is a scalable, distributed \href{https://en.wikipedia.org/wiki/Gradient_boosting}{gradient-boosted} decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification, and ranking problems. It’s vital to an understanding of XGBoost to first grasp the machine learning concepts and algorithms that XGBoost builds upon: supervised machine learning, decision trees, ensemble learning, and \href{https://developer.nvidia.com/blog/gradient-boosting-decision-trees-xgboost-cuda/}{gradient boosting}.
+Importing the required Python libraries used for machine learning tasks and training models is the first step in any data processing task. These libraries facilitate various functionalities like visualization process, data manipulation, data modification, statistical analysis, training and testing of various deep learning models, and other machine learning tasks. Python has various external and built-in libraries that can be imported into the Jupyter Notebook. The libraries used for credit card fraud detection systems are as follows -
 
-\subsection{Logistic Regression}
-Logistic Regression is a statistical technique used primarily for binary classification tasks, although it can be extended to multi-class problems. It models the relationship between one or more independent variables and a categorical dependent variable by estimating probabilities using the logistic function.
+\subsection{Pandas}
+Pandas is a powerful Python package made for analysis and data manipulation. It makes structured data processing simple by offering data structures like DataFrames. Pandas make it easy to effectively carry out operations like data cleansing, modification, data aggregation, data visualization, and data exploration.
 
-\subsection{Random Forest Classifier}
-Random Forest is an ensemble learning algorithm used for classification and regression tasks. It constructs a multitude of decision trees during training, each trained on a random subset of the data and using a random subset of features at each split. The final prediction is determined by aggregating the predictions of all the individual trees, providing robustness against overfitting and often achieving high accuracy.
+\subsection{Numpy}
+Numpy is a free Python software package that is intended for numerical operations on data in the form of arrays and multi-dimensional arrays. It provides standard mathematical techniques for data manipulation using linear algebra and gives users a variety of tools to manage such arrays and perform statistical operations. Basic array operations made possible by NumPy include indexing, slicing, adding, multiplying, and reshaping arrays.
+
+\subsection{Matplotlib}
+Matplotlib is a  Python data visualization package that offers a wide range of data visualization tools and functions that make data reading easy. A variety of graph types, including scatterplots, pie charts, bars, and histograms are available. Furthermore, these graphs may be exported in JPEG or PNG formats
+
+\subsection{Seaborn}
+Seaborn is one the best data visualization libraries used in Python and is a higher version of Matplotlib. It facilitates various functions and methods that can operate in data frames to perform the statistical plotting of graphs like heatmaps and histograms. Various graphs provided by this library include bar charts, histograms, error charts, scatterplots, and also heat maps which are not available in Matplotlib. It also has a feature that can select the colors that can disclose the underlying patterns and trends in the data.
+
+\subsection{Scikit-learn}
+This Python library is available as open-source and is used to build various machine learning methods. To train different machine learning methods and deep learning models, such as decision trees, support vector machines (SVM), naive Bayes, and classifiers, It also provides a variety of classification, regression, clustering, supervised and unsupervised techniques. By determining the accuracy score and producing the classification report, it also aids in evaluating the trained model's correctness; nevertheless, it cannot execute neural network models.
+
+\subsection{Xgboost}
+XGBoost, also referred to as Extreme Gradient Boost is a powerful Python module in which regression and classification are commonly used tasks. Gradient boosting methods are used by XGBoost, which is well-known for its efficiency, scalability, and operational strength. To correct mistakes produced by earlier models, these algorithms successively train inadequate learners, which are usually decision trees. Performance and utilization of resources are optimized by the library through the use of distributed and concurrent computing techniques.
 .
+\section{Reading the Dataset}
+Reading the Dataset is the next step after collecting the data set which is used to analyze the fraud in online transactions through credit cards. It is crucial to read the dataset after importing the required libraries to comprehend the data that has been provided. This makes it easier to train, analyze, and visualize the model of the dataset. The dataset is read by loading the CSV file into a Pandas data frame using the pd.read\_csv() function. This may be accomplished by giving the user the complete path to the CSV file or just the path to the directory in the Python environment where the dataset is uploaded. Once the dataset has been imported, data exploration is carried out. To provide an overview of the data, the top few columns and their contents are shown using the df.head() method. Here, df.head(5) provides the details of the top 5 rows and columns 
 
 \section{Data Collection}
 The dataset for the credit card fraud detection system is taken from an online source Kaggle. It contains details of transactions made by the credit card by the card holders that happened in 2 days. The data set consists of 31 columns which contain the results of the transformation by PCA as numerical data input. Namely V1, V2, V3….V28 are the primary components identified by PCA. Only 2 columns which are ‘Time’ and ‘Amount’ have not undergone PCA transformation. The ‘Time’ column contains the seconds passed between each transaction and the dataset’s initial transaction. The column name ‘Amount’ contains the transaction amount which may be utilized for cost-sensitive learning based on examples. The ‘Class’ column is the answer variable and has the response as 1 in the event of fraud and 0 if no fraud is identified. It is advisable to use the Area Under the Precision-Recall Curve (AUPRC) to measure the accuracy for class imbalance ratio whereas for imbalance class, accuracy by confusion matrix is meaningless.
