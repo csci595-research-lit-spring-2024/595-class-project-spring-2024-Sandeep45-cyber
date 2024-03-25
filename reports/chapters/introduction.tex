@@ -9,7 +9,6 @@ Detecting such fraud manually is a very challenging task due to such a high numb
 
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Background}
 \label{sec:into_back}
@@ -25,32 +24,37 @@ fraud.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem statement}
 \label{sec:intro_prob_art}
-How can machine learning algorithms be effectively employed to enhance the specific identification and timely detection of credit card fraud, ensuring measurable improvements in accuracy, efficiency, and relevance to contemporary fraud patterns?
+Credit card fraud is a major financial problem because it can be tough to identify and results in significant difficulties for individuals, businesses, and financial institutions. Fraudsters attempt to avoid the system and make unauthorised purchases with another person's credit card illegally using their card information which is confidential and can be easily misused. Not only does this harm the individual whose card is taken, but it also causes significant financial losses to banks and retailers. Thus, a sophisticated system that can identify suspicious credit card transactions is needed to ensure that people's money is safe and that everyone may use credit cards without fear of criminals seeking to take advantage of them.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Aims and objectives}
 \label{sec:intro_aims_obj}
 
-
-\textbf{Aims:} The goal of this project is to use machine learning algorithms to create an effective credit card fraud detection system that will limit the scope of fraud by providing a reliable and flexible solution.
-
-
-
-
-\textbf{Objectives:} First, we use machine learning methods, including Random Forest Classification, Decision Tree Classification, and Logistic Regression, to analyse historical credit card transaction data. The focus is on training the models to recognise anomalies in transaction behaviour and spotting patterns suggestive of fraudulent activity. Second, the research seeks to implement and assess the developed models in a real-time context, ensuring the system's capability to swiftly detect and mitigate potential fraud during 
-live transactions. Additionally, the study aims to contribute to the existing knowledge in credit card fraud detection by evaluating and comparing the effectiveness of various 
-machine learning approaches.
+The main purpose of this research is to assess the performance of the user's fraud detection model utilizing various supervised machine algorithms and deep learning and artificial neural models to increase the accuracy of the model and gain a higher detection accuracy by comparing alternative approaches. A credit card fraud detection system's goal is to provide a clever and effective system that can easily identify and avoid illegal or unauthorized credit card transactions. Therefore, creating a system that can identify anomalous behaviors or fraud transactions and promptly notify individuals and financial institutions of such activities is the primary goal.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Solution approach}
 \label{sec:intro_sol} % label of Org section
-In this research work, several models are merged to produce more relevant and effective results. A grid-based searching technique is then implemented and two classifiers—a tree-based model and a liner-based model—are integrated from a variety of models, including Support Vector Machine (SVM), K-means Classification, Decision Tree classifiers, and Regression-based classifiers using the training data set provided to the model as an input which is the processed data. These models are then optimized using methods like hyperparameter tweaking for the given dataset, which significantly improves the model's performance in an optimal way. However, determining the best set of hyperparameters may be difficult and time-consuming, particularly when dealing with a wide variety of hyperparameters and intricate models like LightGBM and XGBoost. The training of the trees by gradient boost technique is optimized by the use of XG Boost which is an Extreme Gradient Boosting algorithm. It is monitored and incredibly adaptable and effective. Large data sets may be utilized for regression and classification and it has an ease of managing the missing values very well by the use of regularization techniques L1 and L2. Improvements have been demonstrated in these areas: accuracy, sensitivity, and precision by evaluating the model on certain performance metrics like recall or precision scores, F1 measures, false negatives and false positives, etc
+Credit Card Fraud Detection is a vital component of guaranteeing financial security for customers and companies alike. It becomes evident that traditional machine learning techniques have not been able to provide effective solutions by analyzing the difficulties related to credit card fraud, such as the availability of public data, class imbalance in data, the changing nature of frauds, and the high number of false alarms. It is possible to create fraud detection algorithms that are more precise and efficient, though, given the recent developments in deep learning. These technologies will save financial organizations billions of dollars that are lost annually to fraud, as well as provide employment security and secure bank and credit card earnings. To improve the productivity and usefulness of its findings, the research incorporates several models. A hybrid strategy is chosen among the models examined, which include Regression-based classifiers, Decision Tree classifiers, and Boosting based models. This hybrid method optimizes using a grid-based searching algorithm and combines a tree-based model with a linear-based model. The models are optimized to maximize performance on the given dataset using methods like hyperparameter tuning. However, determining the best set of hyperparameters may be difficult and time-consuming, particularly when dealing with a wide variety of hyperparameters and intricate models like LightGBM and XGBoost. The training of the tress by gradient boost technique is optimised by the use of XG Boost which is an Extreme Gradient Boosting algorithm. It is monitored and incredibly adaptable and effective. Large data sets may be utilized for regression and classification and it has an ease of managing the missing values very well by the use of regularization techniques L1 and L2. Improvements have been demonstrated in these areas: accuracy, sensitivity, and precision by evaluating the model on certain performance metrics like recall or precision scores, F1 measures, false negatives and false positives, etc. 
 
-\subsection{A subsection 1}
+Thus, by enhancing safety measures, this technology gives the banking industry a better way to identify and stop scams during online transactions.
+
+ 
+
+\subsection{Flow Chart of Data}
 \label{sec:intro_some_sub1}
-You may or may not need subsections here. Depending on your project's needs, add two or more subsection(s). A section takes at least two subsections. 
+
+
+Below, we see how we process the data for our Model Evaluation.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.3]{figures/FlowOfData.png}
+    \caption{Figure of the Data}
+    \label{fig:Plot of the Data}
+\end{figure}
 
 \subsection{A subsection 2}
 \label{sec:intro_some_sub2}
