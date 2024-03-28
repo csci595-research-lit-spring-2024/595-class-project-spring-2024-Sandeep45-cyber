@@ -1,59 +1,35 @@
 \chapter{Results}
 \label{ch:results}
-The results chapter tells a reader about your findings based on the methodology you have used to solve the investigated problem. For example: 
-\begin{itemize}
-    \item If your project aims to develop a software/web application, the results may be the developed software/system/performance of the system, etc., obtained using a relevant methodological approach in software engineering. 
-    
-    \item If your project aims to implement an algorithm for its analysis, the results may be the performance of the algorithm obtained using a relevant experiment design. 
-    
-    \item If your project aims to solve some problems/research questions over a collected dataset, the results may be the findings obtained using the applied tools/algorithms/etc. 
-\end{itemize}
-Arrange your results and findings in a logical sequence. 
+
+
+The results obtained from the credit card fraud detection system give evidence of how well sophisticated deep learning models work for predicting unauthorized transactions. Four distinct machine-learning techniques were taught to distinguish between authentic and fraudulent transactions in this investigation. Accuracy and F1 score, which are crucial metrics for evaluating classification ability, differ throughout the models. A dataset with a variety of transactional anomalous patterns in which the models used to detect fraud transactions are Logistic Regression, Random Forest Classification, XGBoost model, and Cat Boost which can be utilized by importing the Python libraries, Scikit-learn, and xgboost. Each model is trained on the training data provided by the network and then tested against the testing data. After training these models, their performance is evaluated based on various evaluation metrics such as confusion matrix, accuracy score and F1 score. However, for this study, the F1 score is a more reliable measure to analyze the model’s efficiency than the accuracy score because of the imbalance in data as there are a large number of valid transactions and very few fraud transactions. 
 
 
 
-\section{A section}
+ \begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.5]{figures/FinalPlot.png}
+    \caption{Comparison of F1 Scores}
+    \label{fig:Data Preprocessing}
+\end{figure}
+\clearpage
+
+
+A bar plot visualization was utilized to compare the F1 scores, which indicates the Comparison of the F1 Scores of the four models. The graph showed that, in comparison to the other models, the Random Forest model performed the best and obtained the greatest F1 score.
+
+This graphical representation made it very evident how much better the Random Forest model performed when detecting fraudulent transactions in the credit card system. These results demonstrate how important machine learning algorithms are in enhancing financial institutions' security against the constant danger of fraudulent activity. 
+
 
 ...
-
-\clearpage
-\section{Example of a Table in \LaTeX}
-Table~\ref{tab:_ex_tab} is an example of a table created using the package \LaTeX  ``booktabs.'' do check the link: \href{https://en.wikibooks.org/wiki/LaTeX/Tables}{wikibooks.org/wiki/LaTeX/Tables} for more details. A table should be clean and readable. Unnecessary horizontal lines and vertical lines in tables make them unreadable and messy. The example in Table~\ref{tab:_ex_tab} uses a minimum number of liens (only necessary ones). Make sure that the top rule and bottom rule (top and bottom horizontal lines) of a table are present. 
-
-\begin{table}[h!]
-    \centering
-    \caption{Example of a table in \LaTeX}
-    \label{tab:_ex_tab}
-    \begin{tabular}{llr}     
-        \toprule
-        \multicolumn{2}{c}{Bike} \\
-        \cmidrule(r){1-2}
-        Type    &  Color & Price (\pounds) \\
-        \midrule
-        Electric    & black   & 700   \\
-        Hybrid      & blue    & 500   \\
-        Road        & blue    & 300   \\
-        Mountain    & red     & 300   \\
-        Folding     & black   & 500   \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\section{Example of captions style}
-
-\begin{itemize}
-    \item The \textbf{caption of a Figure (artwork) goes below} the artwork (Figure/Graphics/illustration). See example artwork in Figure~\ref{fig:chart_a}. 
-    \item  The \textbf{caption of a Table goes above} the table. See the example in Table~\ref{tab:_ex_tab}.
-    \item  The \textbf{caption of an Algorithm goes above} the algorithm. See the example in Algorithm~\ref{algo:algo_example}.
-    \item The \textbf{caption of a Listing goes below} the Listing  (Code snippet). See example listing in Listing~\ref{list:python_code_ex}. 
-\end{itemize} 
 
 
 
 
 
 \section{Summary}
-Write a summary of this chapter.
+
+
+
 
 
 
